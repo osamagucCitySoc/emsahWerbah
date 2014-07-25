@@ -107,6 +107,7 @@
 		045597BB1981582500B4547F /* Players24-blur-70.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 045597891981582500B4547F /* Players24-blur-70.jpg */; };
 		045597BC1981582500B4547F /* Players25-blur-50.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0455978A1981582500B4547F /* Players25-blur-50.jpg */; };
 		045597BD1981582500B4547F /* Players25-blur-70.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0455978B1981582500B4547F /* Players25-blur-70.jpg */; };
+		045597DE198296A100B4547F /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 045597DD198296A100B4547F /* libGoogleAdMobAds.a */; };
 		046552A5191F826D00B61936 /* Brand-Marks1-blur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0465525A191F826D00B61936 /* Brand-Marks1-blur.jpg */; };
 		046552A6191F826D00B61936 /* Brand-Marks1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0465525B191F826D00B61936 /* Brand-Marks1.jpg */; };
 		046552A7191F826D00B61936 /* Brand-Marks1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0465525C191F826D00B61936 /* Brand-Marks1.txt */; };
@@ -182,7 +183,6 @@
 		046552ED191F826D00B61936 /* Brand-Marks9-blur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 046552A2191F826D00B61936 /* Brand-Marks9-blur.jpg */; };
 		046552EE191F826D00B61936 /* Brand-Marks9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 046552A3191F826D00B61936 /* Brand-Marks9.jpg */; };
 		046552EF191F826D00B61936 /* Brand-Marks9.txt in Resources */ = {isa = PBXBuildFile; fileRef = 046552A4191F826D00B61936 /* Brand-Marks9.txt */; };
-		0476566E1972C5FD0041F254 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0476566D1972C5FD0041F254 /* libGoogleAdMobAds.a */; };
 		047656701972C62E0041F254 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0476566F1972C62E0041F254 /* AdSupport.framework */; };
 		047656721972C6330041F254 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047656711972C6330041F254 /* AudioToolbox.framework */; };
 		047656741972C6390041F254 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047656731972C6390041F254 /* AVFoundation.framework */; };
@@ -600,6 +600,34 @@
 		045597891981582500B4547F /* Players24-blur-70.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Players24-blur-70.jpg"; sourceTree = "<group>"; };
 		0455978A1981582500B4547F /* Players25-blur-50.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Players25-blur-50.jpg"; sourceTree = "<group>"; };
 		0455978B1981582500B4547F /* Players25-blur-70.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Players25-blur-70.jpg"; sourceTree = "<group>"; };
+		045597C0198296A100B4547F /* DFPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPBannerView.h; sourceTree = "<group>"; };
+		045597C1198296A100B4547F /* DFPExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPExtras.h; sourceTree = "<group>"; };
+		045597C2198296A100B4547F /* DFPInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPInterstitial.h; sourceTree = "<group>"; };
+		045597C3198296A100B4547F /* DFPSwipeableBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPSwipeableBannerView.h; sourceTree = "<group>"; };
+		045597C4198296A100B4547F /* GADAdSizeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSizeDelegate.h; sourceTree = "<group>"; };
+		045597C5198296A100B4547F /* GADAppEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAppEventDelegate.h; sourceTree = "<group>"; };
+		045597C6198296A100B4547F /* GADSwipeableBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADSwipeableBannerViewDelegate.h; sourceTree = "<group>"; };
+		045597C8198296A100B4547F /* GADCustomEventBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBanner.h; sourceTree = "<group>"; };
+		045597C9198296A100B4547F /* GADCustomEventBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBannerDelegate.h; sourceTree = "<group>"; };
+		045597CA198296A100B4547F /* GADCustomEventExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventExtras.h; sourceTree = "<group>"; };
+		045597CB198296A100B4547F /* GADCustomEventInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitial.h; sourceTree = "<group>"; };
+		045597CC198296A100B4547F /* GADCustomEventInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitialDelegate.h; sourceTree = "<group>"; };
+		045597CD198296A100B4547F /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
+		045597CF198296A100B4547F /* GADSearchBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADSearchBannerView.h; sourceTree = "<group>"; };
+		045597D0198296A100B4547F /* GADSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADSearchRequest.h; sourceTree = "<group>"; };
+		045597D1198296A100B4547F /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
+		045597D2198296A100B4547F /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
+		045597D3198296A100B4547F /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
+		045597D4198296A100B4547F /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
+		045597D5198296A100B4547F /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
+		045597D6198296A100B4547F /* GADInAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchase.h; sourceTree = "<group>"; };
+		045597D7198296A100B4547F /* GADInAppPurchaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchaseDelegate.h; sourceTree = "<group>"; };
+		045597D8198296A100B4547F /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
+		045597D9198296A100B4547F /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
+		045597DA198296A100B4547F /* GADModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADModules.h; sourceTree = "<group>"; };
+		045597DB198296A100B4547F /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
+		045597DC198296A100B4547F /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
+		045597DD198296A100B4547F /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		0465525A191F826D00B61936 /* Brand-Marks1-blur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Brand-Marks1-blur.jpg"; sourceTree = "<group>"; };
 		0465525B191F826D00B61936 /* Brand-Marks1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Brand-Marks1.jpg"; sourceTree = "<group>"; };
 		0465525C191F826D00B61936 /* Brand-Marks1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Brand-Marks1.txt"; sourceTree = "<group>"; };
@@ -675,34 +703,6 @@
 		046552A2191F826D00B61936 /* Brand-Marks9-blur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Brand-Marks9-blur.jpg"; sourceTree = "<group>"; };
 		046552A3191F826D00B61936 /* Brand-Marks9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Brand-Marks9.jpg"; sourceTree = "<group>"; };
 		046552A4191F826D00B61936 /* Brand-Marks9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Brand-Marks9.txt"; sourceTree = "<group>"; };
-		047656501972C5FD0041F254 /* DFPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPBannerView.h; sourceTree = "<group>"; };
-		047656511972C5FD0041F254 /* DFPExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPExtras.h; sourceTree = "<group>"; };
-		047656521972C5FD0041F254 /* DFPInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPInterstitial.h; sourceTree = "<group>"; };
-		047656531972C5FD0041F254 /* DFPSwipeableBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPSwipeableBannerView.h; sourceTree = "<group>"; };
-		047656541972C5FD0041F254 /* GADAdSizeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSizeDelegate.h; sourceTree = "<group>"; };
-		047656551972C5FD0041F254 /* GADAppEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAppEventDelegate.h; sourceTree = "<group>"; };
-		047656561972C5FD0041F254 /* GADSwipeableBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADSwipeableBannerViewDelegate.h; sourceTree = "<group>"; };
-		047656581972C5FD0041F254 /* GADCustomEventBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBanner.h; sourceTree = "<group>"; };
-		047656591972C5FD0041F254 /* GADCustomEventBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBannerDelegate.h; sourceTree = "<group>"; };
-		0476565A1972C5FD0041F254 /* GADCustomEventExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventExtras.h; sourceTree = "<group>"; };
-		0476565B1972C5FD0041F254 /* GADCustomEventInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitial.h; sourceTree = "<group>"; };
-		0476565C1972C5FD0041F254 /* GADCustomEventInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitialDelegate.h; sourceTree = "<group>"; };
-		0476565D1972C5FD0041F254 /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
-		0476565F1972C5FD0041F254 /* GADSearchBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADSearchBannerView.h; sourceTree = "<group>"; };
-		047656601972C5FD0041F254 /* GADSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADSearchRequest.h; sourceTree = "<group>"; };
-		047656611972C5FD0041F254 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
-		047656621972C5FD0041F254 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
-		047656631972C5FD0041F254 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
-		047656641972C5FD0041F254 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
-		047656651972C5FD0041F254 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
-		047656661972C5FD0041F254 /* GADInAppPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchase.h; sourceTree = "<group>"; };
-		047656671972C5FD0041F254 /* GADInAppPurchaseDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInAppPurchaseDelegate.h; sourceTree = "<group>"; };
-		047656681972C5FD0041F254 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
-		047656691972C5FD0041F254 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
-		0476566A1972C5FD0041F254 /* GADModules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADModules.h; sourceTree = "<group>"; };
-		0476566B1972C5FD0041F254 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
-		0476566C1972C5FD0041F254 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
-		0476566D1972C5FD0041F254 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
 		0476566F1972C62E0041F254 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		047656711972C6330041F254 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		047656731972C6390041F254 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -1035,13 +1035,13 @@
 				047656781972C6460041F254 /* MessageUI.framework in Frameworks */,
 				047656761972C6400041F254 /* CoreTelephony.framework in Frameworks */,
 				047656741972C6390041F254 /* AVFoundation.framework in Frameworks */,
+				045597DE198296A100B4547F /* libGoogleAdMobAds.a in Frameworks */,
 				047656721972C6330041F254 /* AudioToolbox.framework in Frameworks */,
 				047656701972C62E0041F254 /* AdSupport.framework in Frameworks */,
 				04BF1B3319122238008CD8DD /* StoreKit.framework in Frameworks */,
 				04BF1AD919121428008CD8DD /* CoreGraphics.framework in Frameworks */,
 				04BF1ADB19121429008CD8DD /* UIKit.framework in Frameworks */,
 				04BF1AD719121428008CD8DD /* Foundation.framework in Frameworks */,
-				0476566E1972C5FD0041F254 /* libGoogleAdMobAds.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1058,6 +1058,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		045597BE198296A100B4547F /* Add-ons */ = {
+			isa = PBXGroup;
+			children = (
+				045597BF198296A100B4547F /* DoubleClick */,
+				045597C7198296A100B4547F /* Mediation */,
+				045597CE198296A100B4547F /* Search */,
+			);
+			path = "Add-ons";
+			sourceTree = "<group>";
+		};
+		045597BF198296A100B4547F /* DoubleClick */ = {
+			isa = PBXGroup;
+			children = (
+				045597C0198296A100B4547F /* DFPBannerView.h */,
+				045597C1198296A100B4547F /* DFPExtras.h */,
+				045597C2198296A100B4547F /* DFPInterstitial.h */,
+				045597C3198296A100B4547F /* DFPSwipeableBannerView.h */,
+				045597C4198296A100B4547F /* GADAdSizeDelegate.h */,
+				045597C5198296A100B4547F /* GADAppEventDelegate.h */,
+				045597C6198296A100B4547F /* GADSwipeableBannerViewDelegate.h */,
+			);
+			path = DoubleClick;
+			sourceTree = "<group>";
+		};
+		045597C7198296A100B4547F /* Mediation */ = {
+			isa = PBXGroup;
+			children = (
+				045597C8198296A100B4547F /* GADCustomEventBanner.h */,
+				045597C9198296A100B4547F /* GADCustomEventBannerDelegate.h */,
+				045597CA198296A100B4547F /* GADCustomEventExtras.h */,
+				045597CB198296A100B4547F /* GADCustomEventInterstitial.h */,
+				045597CC198296A100B4547F /* GADCustomEventInterstitialDelegate.h */,
+				045597CD198296A100B4547F /* GADCustomEventRequest.h */,
+			);
+			path = Mediation;
+			sourceTree = "<group>";
+		};
+		045597CE198296A100B4547F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				045597CF198296A100B4547F /* GADSearchBannerView.h */,
+				045597D0198296A100B4547F /* GADSearchRequest.h */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		04655259191F826D00B61936 /* Brand-Marks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1143,68 +1189,22 @@
 		0476564D1972C5F20041F254 /* GAD */ = {
 			isa = PBXGroup;
 			children = (
-				0476564E1972C5FD0041F254 /* Add-ons */,
-				047656611972C5FD0041F254 /* GADAdMobExtras.h */,
-				047656621972C5FD0041F254 /* GADAdNetworkExtras.h */,
-				047656631972C5FD0041F254 /* GADAdSize.h */,
-				047656641972C5FD0041F254 /* GADBannerView.h */,
-				047656651972C5FD0041F254 /* GADBannerViewDelegate.h */,
-				047656661972C5FD0041F254 /* GADInAppPurchase.h */,
-				047656671972C5FD0041F254 /* GADInAppPurchaseDelegate.h */,
-				047656681972C5FD0041F254 /* GADInterstitial.h */,
-				047656691972C5FD0041F254 /* GADInterstitialDelegate.h */,
-				0476566A1972C5FD0041F254 /* GADModules.h */,
-				0476566B1972C5FD0041F254 /* GADRequest.h */,
-				0476566C1972C5FD0041F254 /* GADRequestError.h */,
-				0476566D1972C5FD0041F254 /* libGoogleAdMobAds.a */,
+				045597BE198296A100B4547F /* Add-ons */,
+				045597D1198296A100B4547F /* GADAdMobExtras.h */,
+				045597D2198296A100B4547F /* GADAdNetworkExtras.h */,
+				045597D3198296A100B4547F /* GADAdSize.h */,
+				045597D4198296A100B4547F /* GADBannerView.h */,
+				045597D5198296A100B4547F /* GADBannerViewDelegate.h */,
+				045597D6198296A100B4547F /* GADInAppPurchase.h */,
+				045597D7198296A100B4547F /* GADInAppPurchaseDelegate.h */,
+				045597D8198296A100B4547F /* GADInterstitial.h */,
+				045597D9198296A100B4547F /* GADInterstitialDelegate.h */,
+				045597DA198296A100B4547F /* GADModules.h */,
+				045597DB198296A100B4547F /* GADRequest.h */,
+				045597DC198296A100B4547F /* GADRequestError.h */,
+				045597DD198296A100B4547F /* libGoogleAdMobAds.a */,
 			);
 			name = GAD;
-			sourceTree = "<group>";
-		};
-		0476564E1972C5FD0041F254 /* Add-ons */ = {
-			isa = PBXGroup;
-			children = (
-				0476564F1972C5FD0041F254 /* DoubleClick */,
-				047656571972C5FD0041F254 /* Mediation */,
-				0476565E1972C5FD0041F254 /* Search */,
-			);
-			path = "Add-ons";
-			sourceTree = "<group>";
-		};
-		0476564F1972C5FD0041F254 /* DoubleClick */ = {
-			isa = PBXGroup;
-			children = (
-				047656501972C5FD0041F254 /* DFPBannerView.h */,
-				047656511972C5FD0041F254 /* DFPExtras.h */,
-				047656521972C5FD0041F254 /* DFPInterstitial.h */,
-				047656531972C5FD0041F254 /* DFPSwipeableBannerView.h */,
-				047656541972C5FD0041F254 /* GADAdSizeDelegate.h */,
-				047656551972C5FD0041F254 /* GADAppEventDelegate.h */,
-				047656561972C5FD0041F254 /* GADSwipeableBannerViewDelegate.h */,
-			);
-			path = DoubleClick;
-			sourceTree = "<group>";
-		};
-		047656571972C5FD0041F254 /* Mediation */ = {
-			isa = PBXGroup;
-			children = (
-				047656581972C5FD0041F254 /* GADCustomEventBanner.h */,
-				047656591972C5FD0041F254 /* GADCustomEventBannerDelegate.h */,
-				0476565A1972C5FD0041F254 /* GADCustomEventExtras.h */,
-				0476565B1972C5FD0041F254 /* GADCustomEventInterstitial.h */,
-				0476565C1972C5FD0041F254 /* GADCustomEventInterstitialDelegate.h */,
-				0476565D1972C5FD0041F254 /* GADCustomEventRequest.h */,
-			);
-			path = Mediation;
-			sourceTree = "<group>";
-		};
-		0476565E1972C5FD0041F254 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				0476565F1972C5FD0041F254 /* GADSearchBannerView.h */,
-				047656601972C5FD0041F254 /* GADSearchRequest.h */,
-			);
-			path = Search;
 			sourceTree = "<group>";
 		};
 		04BF1ACA19121428008CD8DD = {
