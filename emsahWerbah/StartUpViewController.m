@@ -29,7 +29,7 @@
 {
     [super viewDidLoad];
     [self reload];
-    sad
+
     if([[[NSUserDefaults standardUserDefaults]objectForKey:@"ads"]isEqualToString:@"1"])
     {
     interstitial_ = [[GADInterstitial alloc] init];
