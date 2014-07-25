@@ -23,6 +23,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *playersLabel;
 @property (strong, nonatomic) IBOutlet UILabel *flagsLabel;
 @property (strong, nonatomic) IBOutlet UILabel *brandMarksLabel;
-
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *busyIndicator;
 
 @end

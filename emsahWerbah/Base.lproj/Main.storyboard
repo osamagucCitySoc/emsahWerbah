@@ -381,6 +381,11 @@
                                     <action selector="openLandMarks:" destination="Iam-DO-JQa" eventType="touchUpInside" id="fjU-a0-RhI"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" id="yjm-sB-BEv">
+                                <rect key="frame" x="142" y="227" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="color" red="0.1054870787" green="0.5735641011" blue="0.95679209180000002" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -393,6 +398,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="brandMarksLabel" destination="jYC-IG-uCD" id="te6-vt-2ch"/>
+                        <outlet property="busyIndicator" destination="yjm-sB-BEv" id="u5H-xS-Khp"/>
                         <outlet property="flagsLabel" destination="ho9-d8-U4K" id="kpY-Q8-M6G"/>
                         <outlet property="landMarksLabel" destination="B78-cP-WzZ" id="Her-j7-5Uh"/>
                         <outlet property="playersLabel" destination="r27-WD-xTj" id="8XW-0x-wHj"/>

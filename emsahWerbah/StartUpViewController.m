@@ -29,7 +29,8 @@
 {
     [super viewDidLoad];
     [self reload];
-
+    [self.busyIndicator setAlpha:1.0];
+    [self.view setUserInteractionEnabled:NO];
     if([[[NSUserDefaults standardUserDefaults]objectForKey:@"ads"]isEqualToString:@"1"])
     {
     interstitial_ = [[GADInterstitial alloc] init];
@@ -171,6 +172,8 @@
 }
 -(void)interstitialDidReceiveAd:(GADInterstitial *)ad
 {
+    [self.busyIndicator setAlpha:0.0];
+    [self.view setUserInteractionEnabled:YES];
     [interstitial_ presentFromRootViewController:self];
 }
 
