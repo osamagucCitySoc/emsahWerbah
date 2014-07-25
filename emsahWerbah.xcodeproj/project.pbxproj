@@ -477,7 +477,6 @@
 		45EBAC411930A1CA005F1CEA /* land-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EBAC391930A1CA005F1CEA /* land-icon@2x.png */; };
 		45EBAC421930A1CA005F1CEA /* players-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EBAC3A1930A1CA005F1CEA /* players-icon.png */; };
 		45EBAC431930A1CA005F1CEA /* players-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EBAC3B1930A1CA005F1CEA /* players-icon@2x.png */; };
-		45EBAC461930A819005F1CEA /* StartUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 45EBAC451930A819005F1CEA /* StartUpViewController.m */; };
 		45EBAC4B1930B31B005F1CEA /* buy-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EBAC471930B31B005F1CEA /* buy-1.png */; };
 		45EBAC4C1930B31B005F1CEA /* buy-1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EBAC481930B31B005F1CEA /* buy-1@2x.png */; };
 		45EBAC4D1930B31B005F1CEA /* buy-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 45EBAC491930B31B005F1CEA /* buy-2.png */; };
@@ -1013,7 +1012,6 @@
 		45EBAC3A1930A1CA005F1CEA /* players-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "players-icon.png"; sourceTree = "<group>"; };
 		45EBAC3B1930A1CA005F1CEA /* players-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "players-icon@2x.png"; sourceTree = "<group>"; };
 		45EBAC441930A819005F1CEA /* StartUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUpViewController.h; sourceTree = "<group>"; };
-		45EBAC451930A819005F1CEA /* StartUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUpViewController.m; sourceTree = "<group>"; };
 		45EBAC471930B31B005F1CEA /* buy-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buy-1.png"; sourceTree = "<group>"; };
 		45EBAC481930B31B005F1CEA /* buy-1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buy-1@2x.png"; sourceTree = "<group>"; };
 		45EBAC491930B31B005F1CEA /* buy-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buy-2.png"; sourceTree = "<group>"; };
@@ -1273,7 +1271,6 @@
 				04DBB59D191B49EC00DBC9AB /* startUpTableViewController.h */,
 				04DBB59E191B49EC00DBC9AB /* startUpTableViewController.m */,
 				45EBAC441930A819005F1CEA /* StartUpViewController.h */,
-				45EBAC451930A819005F1CEA /* StartUpViewController.m */,
 				45EBAC571930BDB4005F1CEA /* BuyViewController.h */,
 				45EBAC581930BDB4005F1CEA /* BuyViewController.m */,
 			);
@@ -2286,7 +2283,6 @@
 			files = (
 				04BF1B281912217A008CD8DD /* IAPHelper.m in Sources */,
 				04BF1AED19121429008CD8DD /* ViewController.m in Sources */,
-				45EBAC461930A819005F1CEA /* StartUpViewController.m in Sources */,
 				04BF1AE719121429008CD8DD /* AppDelegate.m in Sources */,
 				0486ADE7191366B30098A00D /* MACircleProgressIndicator.m in Sources */,
 				04BF1B291912217A008CD8DD /* followersExchangePurchase.m in Sources */,
