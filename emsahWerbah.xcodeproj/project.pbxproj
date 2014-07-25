@@ -369,6 +369,8 @@
 		04DE50FC19829F4E004D297C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DE50FB19829F4E004D297C /* CoreLocation.framework */; };
 		04DE50FE19829F53004D297C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DE50FD19829F53004D297C /* Security.framework */; };
 		04DE510019829F58004D297C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DE50FF19829F58004D297C /* CFNetwork.framework */; };
+		04DE51021982A507004D297C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DE51011982A507004D297C /* libz.dylib */; };
+		04DE51041982A519004D297C /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DE51031982A519004D297C /* MobileCoreServices.framework */; };
 		04F0A945192B74C1008358CC /* app-code.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F0A942192B74C1008358CC /* app-code.png */; };
 		04F0A946192B74C1008358CC /* free-ad.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F0A943192B74C1008358CC /* free-ad.png */; };
 		04F0A947192B74C1008358CC /* itunes-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F0A944192B74C1008358CC /* itunes-card.png */; };
@@ -907,6 +909,8 @@
 		04DE50FB19829F4E004D297C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		04DE50FD19829F53004D297C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		04DE50FF19829F58004D297C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		04DE51011982A507004D297C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		04DE51031982A519004D297C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		04F0A942192B74C1008358CC /* app-code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-code.png"; sourceTree = "<group>"; };
 		04F0A943192B74C1008358CC /* free-ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-ad.png"; sourceTree = "<group>"; };
 		04F0A944192B74C1008358CC /* itunes-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "itunes-card.png"; sourceTree = "<group>"; };
@@ -1039,10 +1043,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DE51041982A519004D297C /* MobileCoreServices.framework in Frameworks */,
+				04DE51021982A507004D297C /* libz.dylib in Frameworks */,
+				0476567A1972C6500041F254 /* SystemConfiguration.framework in Frameworks */,
 				04DE510019829F58004D297C /* CFNetwork.framework in Frameworks */,
 				04DE50FE19829F53004D297C /* Security.framework in Frameworks */,
 				04DE50FC19829F4E004D297C /* CoreLocation.framework in Frameworks */,
-				0476567A1972C6500041F254 /* SystemConfiguration.framework in Frameworks */,
 				047656781972C6460041F254 /* MessageUI.framework in Frameworks */,
 				047656761972C6400041F254 /* CoreTelephony.framework in Frameworks */,
 				047656741972C6390041F254 /* AVFoundation.framework in Frameworks */,
@@ -1250,6 +1256,8 @@
 		04BF1AD519121428008CD8DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04DE51031982A519004D297C /* MobileCoreServices.framework */,
+				04DE51011982A507004D297C /* libz.dylib */,
 				04DE50FF19829F58004D297C /* CFNetwork.framework */,
 				04DE50FD19829F53004D297C /* Security.framework */,
 				04DE50FB19829F4E004D297C /* CoreLocation.framework */,
@@ -2397,6 +2405,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "49A13AE8-7B5D-4229-B999-420F9E47A0C5";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2428,6 +2437,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "49A13AE8-7B5D-4229-B999-420F9E47A0C5";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2453,6 +2463,7 @@
 					"$(PROJECT_DIR)/emsahWerbah/libGoogleAdMobAds.a",
 				);
 				PRODUCT_NAME = "إمسح واربح";
+				PROVISIONING_PROFILE = "49A13AE8-7B5D-4229-B999-420F9E47A0C5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2477,6 +2488,7 @@
 					"$(PROJECT_DIR)/emsahWerbah/libGoogleAdMobAds.a",
 				);
 				PRODUCT_NAME = "إمسح واربح";
+				PROVISIONING_PROFILE = "49A13AE8-7B5D-4229-B999-420F9E47A0C5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -13,6 +13,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:
+     (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+
     [FollowersExchangePurchase sharedInstance];
     
     [Parse setApplicationId:@"t2G3HhGYtMEFe3PPFgit5nvoRHLUi2AUV4Arvira"
