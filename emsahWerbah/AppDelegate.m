@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation AppDelegate
 
@@ -14,6 +15,8 @@
 {
     [FollowersExchangePurchase sharedInstance];
     
+    [Parse setApplicationId:@"t2G3HhGYtMEFe3PPFgit5nvoRHLUi2AUV4Arvira"
+                  clientKey:@"OgCadknxeo23hzuZzzNhrWzrbr3sCjwUZXUxjRba"];
     
     NSString *post = @"";
     
@@ -110,5 +113,19 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+- (void)application:(UIApplication*)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData*)deviceToken
+{
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
+{
+    [PFPush handlePush:userInfo];
+}
+
 
 @end

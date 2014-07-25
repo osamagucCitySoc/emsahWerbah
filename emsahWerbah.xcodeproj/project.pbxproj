@@ -365,6 +365,10 @@
 		04DBB6FF191B820500DBC9AB /* Players25-blur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04DBB6CD191B820500DBC9AB /* Players25-blur.jpg */; };
 		04DBB700191B820500DBC9AB /* Players25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04DBB6CE191B820500DBC9AB /* Players25.jpg */; };
 		04DE50F819829B35004D297C /* StartUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE50F719829B35004D297C /* StartUpViewController.m */; };
+		04DE50FA19829F36004D297C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DE50F919829F36004D297C /* Parse.framework */; };
+		04DE50FC19829F4E004D297C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DE50FB19829F4E004D297C /* CoreLocation.framework */; };
+		04DE50FE19829F53004D297C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DE50FD19829F53004D297C /* Security.framework */; };
+		04DE510019829F58004D297C /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04DE50FF19829F58004D297C /* CFNetwork.framework */; };
 		04F0A945192B74C1008358CC /* app-code.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F0A942192B74C1008358CC /* app-code.png */; };
 		04F0A946192B74C1008358CC /* free-ad.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F0A943192B74C1008358CC /* free-ad.png */; };
 		04F0A947192B74C1008358CC /* itunes-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F0A944192B74C1008358CC /* itunes-card.png */; };
@@ -899,6 +903,10 @@
 		04DBB6CD191B820500DBC9AB /* Players25-blur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Players25-blur.jpg"; sourceTree = "<group>"; };
 		04DBB6CE191B820500DBC9AB /* Players25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Players25.jpg; sourceTree = "<group>"; };
 		04DE50F719829B35004D297C /* StartUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUpViewController.m; sourceTree = "<group>"; };
+		04DE50F919829F36004D297C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		04DE50FB19829F4E004D297C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		04DE50FD19829F53004D297C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		04DE50FF19829F58004D297C /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		04F0A942192B74C1008358CC /* app-code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-code.png"; sourceTree = "<group>"; };
 		04F0A943192B74C1008358CC /* free-ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-ad.png"; sourceTree = "<group>"; };
 		04F0A944192B74C1008358CC /* itunes-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "itunes-card.png"; sourceTree = "<group>"; };
@@ -1031,6 +1039,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04DE510019829F58004D297C /* CFNetwork.framework in Frameworks */,
+				04DE50FE19829F53004D297C /* Security.framework in Frameworks */,
+				04DE50FC19829F4E004D297C /* CoreLocation.framework in Frameworks */,
 				0476567A1972C6500041F254 /* SystemConfiguration.framework in Frameworks */,
 				047656781972C6460041F254 /* MessageUI.framework in Frameworks */,
 				047656761972C6400041F254 /* CoreTelephony.framework in Frameworks */,
@@ -1041,6 +1052,7 @@
 				04BF1B3319122238008CD8DD /* StoreKit.framework in Frameworks */,
 				04BF1AD919121428008CD8DD /* CoreGraphics.framework in Frameworks */,
 				04BF1ADB19121429008CD8DD /* UIKit.framework in Frameworks */,
+				04DE50FA19829F36004D297C /* Parse.framework in Frameworks */,
 				04BF1AD719121428008CD8DD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1238,6 +1250,10 @@
 		04BF1AD519121428008CD8DD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				04DE50FF19829F58004D297C /* CFNetwork.framework */,
+				04DE50FD19829F53004D297C /* Security.framework */,
+				04DE50FB19829F4E004D297C /* CoreLocation.framework */,
+				04DE50F919829F36004D297C /* Parse.framework */,
 				047656791972C6500041F254 /* SystemConfiguration.framework */,
 				047656771972C6460041F254 /* MessageUI.framework */,
 				047656751972C6400041F254 /* CoreTelephony.framework */,
@@ -2420,6 +2436,10 @@
 		04BF1B0619121429008CD8DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "emsahWerbah/emsahWerbah-Prefix.pch";
 				INFOPLIST_FILE = "emsahWerbah/emsahWerbah-Info.plist";
@@ -2428,7 +2448,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/emsahWerbah",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/emsahWerbah/libGoogleAdMobAds.a",
+				);
 				PRODUCT_NAME = "إمسح واربح";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2437,6 +2460,10 @@
 		04BF1B0719121429008CD8DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "emsahWerbah/emsahWerbah-Prefix.pch";
 				INFOPLIST_FILE = "emsahWerbah/emsahWerbah-Info.plist";
@@ -2445,7 +2472,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/emsahWerbah",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-force_load",
+					"$(PROJECT_DIR)/emsahWerbah/libGoogleAdMobAds.a",
+				);
 				PRODUCT_NAME = "إمسح واربح";
 				WRAPPER_EXTENSION = app;
 			};
