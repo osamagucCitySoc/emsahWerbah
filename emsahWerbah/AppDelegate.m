@@ -20,7 +20,7 @@
     NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
     NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
     
-    NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/emsahAds.php"];
+    NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/emsahWerbah/getAds.php"];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
     [request setHTTPMethod:@"POST"];
     

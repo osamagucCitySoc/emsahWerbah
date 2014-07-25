@@ -28,15 +28,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self reload];
-    [self.busyIndicator setAlpha:1.0];
-    [self.view setUserInteractionEnabled:NO];
+    //[self reload];
+    
+    [self.busyIndicator setAlpha:0.0];
+//    [self.view setUserInteractionEnabled:NO];
     if([[[NSUserDefaults standardUserDefaults]objectForKey:@"ads"]isEqualToString:@"1"])
     {
-    interstitial_ = [[GADInterstitial alloc] init];
-    interstitial_.adUnitID = @"ca-app-pub-2433238124854818/4683057194";
-    [interstitial_ setDelegate:self];
-    [interstitial_ loadRequest:[GADRequest request]];
+        interstitial_ = [[GADInterstitial alloc] init];
+        interstitial_.adUnitID = @"ca-app-pub-2433238124854818/4683057194";
+        [interstitial_ setDelegate:self];
+        [interstitial_ loadRequest:[GADRequest request]];
     }
     
     store = [UICKeyChainStore keyChainStore];

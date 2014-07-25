@@ -25,24 +25,24 @@
     
     blurAddingString = @"";
     
-    
-    
-    if([[[NSUserDefaults standardUserDefaults]objectForKey:@"ads"]isEqualToString:@"1"])
-    {
-    bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
-    bannerView_.adUnitID = @"ca-app-pub-2433238124854818/9113256795";
-    bannerView_.rootViewController = self;
-    [self.view addSubview:bannerView_];
-    
-    
     bannerView_2 = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
     bannerView_2.adUnitID = @"ca-app-pub-2433238124854818/9113256795";
     bannerView_2.rootViewController = self;
     [self.bannerView addSubview:bannerView_2];
     
     // Initiate a generic request to load it with an ad.
-    [bannerView_ loadRequest:[GADRequest request]];
+    
     [bannerView_2 loadRequest:[GADRequest request]];
+    
+    
+    if([[[NSUserDefaults standardUserDefaults]objectForKey:@"ads"]isEqualToString:@"1"])
+    {
+        
+        bannerView_ = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
+        bannerView_.adUnitID = @"ca-app-pub-2433238124854818/9113256795";
+        bannerView_.rootViewController = self;
+        [bannerView_ loadRequest:[GADRequest request]];
+        [self.view addSubview:bannerView_];
     }
     remain = [[NSMutableArray alloc]init];
     for(int i = 1 ; i <= 25 ; i++)
