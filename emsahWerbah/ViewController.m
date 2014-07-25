@@ -232,7 +232,29 @@
     products = nil;
     [[FollowersExchangePurchase sharedInstance] requestProductsWithCompletionHandler:^(BOOL success, NSArray *productss) {
         if (success) {
-            products = productss;
+            NSMutableArray* tempProducts = [[NSMutableArray alloc]initWithObjects:@"",@"", nil];
+            for (SKProduct* product in productss) {
+                if([product.productIdentifier isEqualToString:@"arabdevs.emsahWerbah.6"])
+                {
+                    [tempProducts replaceObjectAtIndex:0 withObject:product];
+                }else if([product.productIdentifier isEqualToString:@"arabdevs.emsahWerbah.6s"])
+                {
+                    [tempProducts replaceObjectAtIndex:1 withObject:product];
+                }else if([product.productIdentifier isEqualToString:@"arabdevs.emsahWerbah.50land"] && [[[NSUserDefaults standardUserDefaults]objectForKey:@"path"] isEqualToString:@"Land-Marks"])
+                {
+                    [tempProducts addObject:product];
+                }else if([product.productIdentifier isEqualToString:@"arabdevs.emsahWerbah.70land"] && [[[NSUserDefaults standardUserDefaults]objectForKey:@"path"] isEqualToString:@"Land-Marks"])
+                {
+                    [tempProducts addObject:product];
+                }else if([product.productIdentifier isEqualToString:@"arabdevs.emsahWerbah.50player"] && [[[NSUserDefaults standardUserDefaults]objectForKey:@"path"] isEqualToString:@"Players"])
+                {
+                    [tempProducts addObject:product];
+                }else if([product.productIdentifier isEqualToString:@"arabdevs.emsahWerbah.70player"] && [[[NSUserDefaults standardUserDefaults]objectForKey:@"path"] isEqualToString:@"Players"])
+                {
+                    [tempProducts addObject:product];
+                }
+            }
+            products = [[NSArray alloc]initWithArray:tempProducts];
         }
     }];
 }
@@ -252,11 +274,11 @@
             [self.navigationController popViewControllerAnimated:YES];
         }else if(buttonIndex == 2 && buttonIndex != actionSheet.cancelButtonIndex)
         {
-            SKProduct *product = products[1];
+            SKProduct *product = products[3];
             [[FollowersExchangePurchase sharedInstance] buyProduct:product];
         }else if(buttonIndex == 3 && buttonIndex != actionSheet.cancelButtonIndex)
         {
-            SKProduct *product = products[1];
+            SKProduct *product = products[2];
             [[FollowersExchangePurchase sharedInstance] buyProduct:product];
         }
     }
@@ -404,7 +426,7 @@
     NSLog(@"%@",[[NSUserDefaults standardUserDefaults]objectForKey:@"path"]);
     if([[[NSUserDefaults standardUserDefaults]objectForKey:@"path"]isEqualToString:@"Players"] || [[[NSUserDefaults standardUserDefaults]objectForKey:@"path"]isEqualToString:@"Land-Marks"])
     {
-        sheet = [[UIActionSheet alloc] initWithTitle:@"خيارات" delegate:self cancelButtonTitle:@"إلغاء" destructiveButtonTitle:nil otherButtonTitles:@"عرفت الحل",@"امسح واكتشف",@"Reset",@"تقليل التشفير لدرجة ٧٠٪ ل١٠ صور",@"تقليل التشفير لدرجة ٥٠٪ ل١٠ صور",nil];
+        sheet = [[UIActionSheet alloc] initWithTitle:@"مساعدة" delegate:self cancelButtonTitle:@"إلغاء" destructiveButtonTitle:nil otherButtonTitles:@"معلومة عن الصورة", @"Reset",@"تقليل تشفير ١٠ صور ل ٧٠٪",@"تقليل تشفير ١٠ صور ل ٥٠٪",nil];
     }else
     {
         sheet = [[UIActionSheet alloc]initWithTitle:@"مساعدة" delegate:self cancelButtonTitle:@"إلغاء" destructiveButtonTitle:nil otherButtonTitles:@"معلومة عن الصورة", @"Reset",nil];
@@ -451,11 +473,12 @@
                         [[NSUserDefaults standardUserDefaults] setObject:blurAddingString forKey:@"blurplayer"];
                         [[NSUserDefaults standardUserDefaults]synchronize];
                         int rem = [[[NSUserDefaults standardUserDefaults] objectForKey:@"blurplayerrem"] intValue];
-                        rem += 10;
+                        rem = 10;
                         [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%i",rem] forKey:@"blurplayerrem"];
                         [[NSUserDefaults standardUserDefaults]synchronize];
                     }
                     [alert show];
+                    [self initUI];
                 }else if([productIdentifier isEqualToString:@"arabdevs.emsahWerbah.50player"])
                 {
                     if([[[NSUserDefaults standardUserDefaults]objectForKey:@"path"]isEqualToString:@"Players"])
@@ -464,11 +487,12 @@
                         [[NSUserDefaults standardUserDefaults] setObject:blurAddingString forKey:@"blurplayer"];
                         [[NSUserDefaults standardUserDefaults]synchronize];
                         int rem = [[[NSUserDefaults standardUserDefaults] objectForKey:@"blurplayerrem"] intValue];
-                        rem += 10;
+                        rem = 10;
                         [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%i",rem] forKey:@"blurplayerrem"];
                         [[NSUserDefaults standardUserDefaults]synchronize];
                     }
                     [alert show];
+                    [self initUI];
                 }else if([productIdentifier isEqualToString:@"arabdevs.emsahWerbah.70land"])
                 {
                     if([[[NSUserDefaults standardUserDefaults]objectForKey:@"path"]isEqualToString:@"Land-Marks"])
@@ -477,11 +501,12 @@
                         [[NSUserDefaults standardUserDefaults] setObject:blurAddingString forKey:@"blurlandmark"];
                         [[NSUserDefaults standardUserDefaults]synchronize];
                         int rem = [[[NSUserDefaults standardUserDefaults] objectForKey:@"blurlandmarkrem"] intValue];
-                        rem += 10;
+                        rem = 10;
                         [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%i",rem] forKey:@"blurlandmarkrem"];
                         [[NSUserDefaults standardUserDefaults]synchronize];
                     }
                     [alert show];
+                    [self initUI];
                 }else if([productIdentifier isEqualToString:@"arabdevs.emsahWerbah.50land"])
                 {
                     if([[[NSUserDefaults standardUserDefaults]objectForKey:@"path"]isEqualToString:@"Land-Marks"])
@@ -490,11 +515,12 @@
                         [[NSUserDefaults standardUserDefaults] setObject:blurAddingString forKey:@"blurlandmark"];
                         [[NSUserDefaults standardUserDefaults]synchronize];
                         int rem = [[[NSUserDefaults standardUserDefaults] objectForKey:@"blurlandmarkrem"] intValue];
-                        rem += 10;
+                        rem = 10;
                         [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%i",rem] forKey:@"blurlandmarkrem"];
                         [[NSUserDefaults standardUserDefaults]synchronize];
                     }
                     [alert show];
+                    [self initUI];
                 }
                 *stop = YES;
             }
