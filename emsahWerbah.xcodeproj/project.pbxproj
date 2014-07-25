@@ -364,6 +364,7 @@
 		04DBB6FE191B820500DBC9AB /* Players24.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04DBB6CC191B820500DBC9AB /* Players24.jpg */; };
 		04DBB6FF191B820500DBC9AB /* Players25-blur.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04DBB6CD191B820500DBC9AB /* Players25-blur.jpg */; };
 		04DBB700191B820500DBC9AB /* Players25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04DBB6CE191B820500DBC9AB /* Players25.jpg */; };
+		04DE50F819829B35004D297C /* StartUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DE50F719829B35004D297C /* StartUpViewController.m */; };
 		04F0A945192B74C1008358CC /* app-code.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F0A942192B74C1008358CC /* app-code.png */; };
 		04F0A946192B74C1008358CC /* free-ad.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F0A943192B74C1008358CC /* free-ad.png */; };
 		04F0A947192B74C1008358CC /* itunes-card.png in Resources */ = {isa = PBXBuildFile; fileRef = 04F0A944192B74C1008358CC /* itunes-card.png */; };
@@ -897,6 +898,7 @@
 		04DBB6CC191B820500DBC9AB /* Players24.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Players24.jpg; sourceTree = "<group>"; };
 		04DBB6CD191B820500DBC9AB /* Players25-blur.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Players25-blur.jpg"; sourceTree = "<group>"; };
 		04DBB6CE191B820500DBC9AB /* Players25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Players25.jpg; sourceTree = "<group>"; };
+		04DE50F719829B35004D297C /* StartUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUpViewController.m; sourceTree = "<group>"; };
 		04F0A942192B74C1008358CC /* app-code.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app-code.png"; sourceTree = "<group>"; };
 		04F0A943192B74C1008358CC /* free-ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "free-ad.png"; sourceTree = "<group>"; };
 		04F0A944192B74C1008358CC /* itunes-card.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "itunes-card.png"; sourceTree = "<group>"; };
@@ -1271,6 +1273,7 @@
 				04DBB59D191B49EC00DBC9AB /* startUpTableViewController.h */,
 				04DBB59E191B49EC00DBC9AB /* startUpTableViewController.m */,
 				45EBAC441930A819005F1CEA /* StartUpViewController.h */,
+				04DE50F719829B35004D297C /* StartUpViewController.m */,
 				45EBAC571930BDB4005F1CEA /* BuyViewController.h */,
 				45EBAC581930BDB4005F1CEA /* BuyViewController.m */,
 			);
@@ -2283,6 +2286,7 @@
 			files = (
 				04BF1B281912217A008CD8DD /* IAPHelper.m in Sources */,
 				04BF1AED19121429008CD8DD /* ViewController.m in Sources */,
+				04DE50F819829B35004D297C /* StartUpViewController.m in Sources */,
 				04BF1AE719121429008CD8DD /* AppDelegate.m in Sources */,
 				0486ADE7191366B30098A00D /* MACircleProgressIndicator.m in Sources */,
 				04BF1B291912217A008CD8DD /* followersExchangePurchase.m in Sources */,
