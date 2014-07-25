@@ -12,7 +12,75 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [FollowersExchangePurchase sharedInstance];
+    
+    
+    NSString *post = @"";
+    
+    NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
+    
+    NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/emsahAds.php"];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
+    [request setHTTPMethod:@"POST"];
+    
+    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+    
+    [request setHTTPBody:postData];
+    
+    NSURLResponse* response;
+    NSError* error = nil;
+    
+    NSData* result = [NSURLConnection sendSynchronousRequest:request  returningResponse:&response error:&error];
+    [[NSUserDefaults standardUserDefaults]setObject:[[NSString alloc]initWithData:result encoding:NSUTF8StringEncoding] forKey:@"ads"];
+    [[NSUserDefaults standardUserDefaults]synchronize];
+    
+    UICKeyChainStore *store = [UICKeyChainStore keyChainStore];
+    @try {
+        if([store stringForKey:@"hints"] == nil)
+        {
+            [store setString:@"0" forKey:@"hints"];
+            [store synchronize];
+        }
+        
+        if([store stringForKey:@"secs"] == nil)
+        {
+            [store setString:@"0" forKey:@"secs"];
+            [store synchronize];
+        }
+    }
+    @catch (NSException *exception) {}
+    @finally {}
+    
+    
+    NSArray* dataSource = [[NSArray alloc]initWithObjects:@"Players",@"Flags",@"Land-Marks",@"Brand-Marks", nil];
+    
+    for (int i = 0; i < 4; i++)
+    {
+        NSArray* solved = [[[NSUserDefaults standardUserDefaults]objectForKey:[NSString stringWithFormat:@"%@%@",[dataSource objectAtIndex:i],@"SOLVED"]] componentsSeparatedByString:@"##"];
+        if(solved == nil)
+        {
+            [[NSUserDefaults standardUserDefaults]setObject:@"" forKey:[NSString stringWithFormat:@"%@%@",[dataSource objectAtIndex:i],@"SOLVED"]];
+            [[NSUserDefaults standardUserDefaults]synchronize];
+        }
+    }
+    
+    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"blurplayer"] == nil)
+    {
+        [[NSUserDefaults standardUserDefaults]setObject:@"" forKey:@"blurplayer"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSUserDefaults standardUserDefaults]setObject:@"0" forKey:@"blurplayerrem"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
+    if([[NSUserDefaults standardUserDefaults] objectForKey:@"blurlandmark"] == nil)
+    {
+        [[NSUserDefaults standardUserDefaults]setObject:@"" forKey:@"blurlandmark"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSUserDefaults standardUserDefaults]setObject:@"0" forKey:@"blurlandmarkrem"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
     return YES;
 }
 							

@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FollowersExchangePurchase.h"
+#import "UICKeyChainStore.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
