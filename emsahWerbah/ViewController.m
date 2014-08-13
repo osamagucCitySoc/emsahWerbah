@@ -23,6 +23,7 @@
         // self.edgesForExtendedLayout = UIRectEdgeNone;
     }
     
+       
     blurAddingString = @"";
     
     bannerView_2 = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
@@ -61,8 +62,20 @@
     gift = NO;
     [self initUI];
     [self reload];
-    
-    if ([[UIScreen mainScreen] bounds].size.height < 490)
+   
+    if ( [(NSString*)[UIDevice currentDevice].model hasPrefix:@"iPad"] ) {
+        CGRect rectS = self.solutionButton.frame;
+        CGRect rectE = self.emsahButton.frame;
+        rectS.size.height -= 10;
+        rectE.size.height -= 10;
+        rectS.origin.y += 85;
+        rectE.origin.y += 70;
+        [self.solutionButton setFrame:rectS];
+        [self.emsahButton setFrame:rectE];
+        //[self.view bringSubviewToFront:self.solutionButton];
+    }
+
+    if ([[UIScreen mainScreen] bounds].size.height < 490 && ![(NSString*)[UIDevice currentDevice].model hasPrefix:@"iPad"])
     {
         [_emsahButton setHidden:YES];
         [_solutionButton setHidden:YES];
@@ -77,6 +90,11 @@
     if ([[[UIDevice currentDevice] systemVersion] floatValue] < 7.0)return;
     self.navigationController.interactivePopGestureRecognizer.enabled = NO;
 }
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    }
 
 -(void) viewWillDisappear:(BOOL)animated
 {

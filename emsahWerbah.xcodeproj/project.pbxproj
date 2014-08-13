@@ -1811,6 +1811,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = OsamaMac;
 				TargetAttributes = {
+					04BF1AD219121428008CD8DD = {
+						DevelopmentTeam = 9672ZX333W;
+					};
 					04BF1AF319121429008CD8DD = {
 						TestTargetID = 04BF1AD219121428008CD8DD;
 					};
@@ -2387,7 +2390,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Musaed Alazmi (9672ZX333W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Musaed Alazmi (9672ZX333W)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -2405,7 +2409,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "49A13AE8-7B5D-4229-B999-420F9E47A0C5";
+				PROVISIONING_PROFILE = "2903E4EE-4DDE-48D8-BE8C-C1F50B3358E0";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2426,7 +2430,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Musaed Alazmi (9672ZX333W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Musaed Alazmi (9672ZX333W)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -2437,7 +2442,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PROVISIONING_PROFILE = "49A13AE8-7B5D-4229-B999-420F9E47A0C5";
+				PROVISIONING_PROFILE = "2903E4EE-4DDE-48D8-BE8C-C1F50B3358E0";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -2446,6 +2451,7 @@
 		04BF1B0619121429008CD8DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Musaed Alazmi (9672ZX333W)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2463,7 +2469,7 @@
 					"$(PROJECT_DIR)/emsahWerbah/libGoogleAdMobAds.a",
 				);
 				PRODUCT_NAME = "إمسح واربح";
-				PROVISIONING_PROFILE = "49A13AE8-7B5D-4229-B999-420F9E47A0C5";
+				PROVISIONING_PROFILE = "2903E4EE-4DDE-48D8-BE8C-C1F50B3358E0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2471,6 +2477,7 @@
 		04BF1B0719121429008CD8DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Musaed Alazmi (9672ZX333W)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -2488,7 +2495,7 @@
 					"$(PROJECT_DIR)/emsahWerbah/libGoogleAdMobAds.a",
 				);
 				PRODUCT_NAME = "إمسح واربح";
-				PROVISIONING_PROFILE = "49A13AE8-7B5D-4229-B999-420F9E47A0C5";
+				PROVISIONING_PROFILE = "2903E4EE-4DDE-48D8-BE8C-C1F50B3358E0";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
