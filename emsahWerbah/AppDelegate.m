@@ -54,9 +54,21 @@
             [store setString:@"0" forKey:@"secs"];
             [store synchronize];
         }
+        
+        if([store stringForKey:@"giffft"] == nil)
+        {
+            [store setString:@"3" forKey:@"secs"];
+            [store setString:@"3" forKey:@"giffft"];
+            [store synchronize];
+            UIAlertView* alert = [[UIAlertView alloc]initWithTitle:@"مبروك" message:@"بمناسبة التحميل أعطينا لك ٣ ثواني تستخدمهم في مسح الصور هدية" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [alert show];
+        }
     }
     @catch (NSException *exception) {}
     @finally {}
+    
+    
+    
     
     
     NSArray* dataSource = [[NSArray alloc]initWithObjects:@"Players",@"Flags",@"Land-Marks",@"Brand-Marks", nil];
