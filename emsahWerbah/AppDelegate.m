@@ -87,6 +87,7 @@
         [[NSUserDefaults standardUserDefaults]setObject:@"0" forKey:@"blurlandmarkrem"];
         [[NSUserDefaults standardUserDefaults] synchronize];
     }
+    
     return YES;
 }
 							

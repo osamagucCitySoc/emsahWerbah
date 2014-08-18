@@ -215,6 +215,10 @@
                                     <action selector="knewSolution:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Tiq-hC-QJ6"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" id="oA1-8W-HN0">
+                                <rect key="frame" x="142" y="201" width="37" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -227,6 +231,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="bannerView" destination="tQX-Qj-7sB" id="UVH-MU-umz"/>
+                        <outlet property="busyInd" destination="oA1-8W-HN0" id="aYx-Pi-LOJ"/>
                         <outlet property="circle" destination="oem-zF-PoJ" id="5Uh-hE-IW1"/>
                         <outlet property="emsahButton" destination="mtY-Hw-JKS" id="yI9-nI-NfL"/>
                         <outlet property="hinstAvLabel" destination="Wu0-5S-DyU" id="hvb-Rn-etz"/>

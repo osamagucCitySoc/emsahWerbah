@@ -26,6 +26,7 @@
     int currentDisplayedInfo;
     BOOL gift;
     NSURLConnection* connection;
+    NSURLConnection* getDetailsConnection;
     NSArray* dataSourcee;
     UICKeyChainStore *store;
     NSMutableArray* remain;
@@ -37,6 +38,7 @@
 
 }
 
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *busyInd;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) NSArray* products;
 @property (strong, nonatomic) IBOutlet MACircleProgressIndicator *circle;

@@ -23,7 +23,7 @@
         // self.edgesForExtendedLayout = UIRectEdgeNone;
     }
     
-       
+    
     blurAddingString = @"";
     
     bannerView_2 = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner];
@@ -62,7 +62,7 @@
     gift = NO;
     [self initUI];
     [self reload];
-   
+    
     if ( [(NSString*)[UIDevice currentDevice].model hasPrefix:@"iPad"] ) {
         CGRect rectS = self.solutionButton.frame;
         CGRect rectE = self.emsahButton.frame;
@@ -74,7 +74,7 @@
         [self.emsahButton setFrame:rectE];
         //[self.view bringSubviewToFront:self.solutionButton];
     }
-
+    
     if ([[UIScreen mainScreen] bounds].size.height < 490 && ![(NSString*)[UIDevice currentDevice].model hasPrefix:@"iPad"])
     {
         [_emsahButton setHidden:YES];
@@ -94,7 +94,7 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    }
+}
 
 -(void) viewWillDisappear:(BOOL)animated
 {
@@ -143,9 +143,30 @@
             currentImage = [remain objectAtIndex:r];
         }
         
-        NSError *error = nil;
-        NSString *fullPath = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@%@",currentPath,currentImage] ofType:@"txt"];
-        info = [[NSString stringWithContentsOfFile:fullPath encoding:NSUTF8StringEncoding error:&error] componentsSeparatedByString:@"\n"];
+        [self.busyInd setAlpha:1.0];
+        [self.view bringSubviewToFront:self.busyInd];
+        [self.view setUserInteractionEnabled:NO];
+        
+        NSString *imageName = [NSString stringWithFormat:@"%@%@",currentPath,currentImage];
+        
+        NSString *post = [NSString stringWithFormat:@"imageName=%@", imageName];
+        
+        NSData *postData = [post dataUsingEncoding:NSUTF8StringEncoding allowLossyConversion:NO];
+        NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[post length]];
+        
+        NSURL *url = [NSURL URLWithString:@"http://osamalogician.com/arabDevs/emsahWerbah/getDetails.php"];
+        
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:90.0];
+        [request setHTTPMethod:@"POST"];
+        
+        [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+        [request setHTTPBody:postData];
+        
+        getDetailsConnection = [[NSURLConnection alloc]initWithRequest:request delegate:self    startImmediately:NO];
+        
+        [getDetailsConnection scheduleInRunLoop:[NSRunLoop mainRunLoop]
+                                        forMode:NSDefaultRunLoopMode];
+        [getDetailsConnection start];
         
         currentDisplayedInfo = 0;
         
@@ -206,6 +227,7 @@
         
         [self.view bringSubviewToFront:timerLabel];
         [self.view bringSubviewToFront:circle];
+        [self.view bringSubviewToFront:self.busyInd];
     }else
     {
         
@@ -612,7 +634,17 @@
         if(buttonIndex != alertView.cancelButtonIndex)
         {
             NSString* enteredAnswer = [[alertView textFieldAtIndex:0] text];
-            if([enteredAnswer isEqualToString:[info objectAtIndex:3]])
+            NSArray* answers = [[info objectAtIndex:3] componentsSeparatedByString:@"##"];
+            BOOL answered = NO;
+            for(NSString* correctAnswer in answers)
+            {
+                if([[enteredAnswer stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] isEqualToString:[correctAnswer stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]])
+                {
+                    answered = YES;
+                    break;
+                }
+            }
+            if(answered)
             {
                 [remain removeObject:currentImage];
                 
@@ -688,57 +720,65 @@
 
 
 #pragma mark connection delegate
--(void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+-(void)connection:(NSURLConnection *)connectionn didReceiveData:(NSData *)data
 {
-    NSError* error2;
-    
-    NSString* whichImage = @"";
-    
-    dataSourcee = [NSJSONSerialization
-                   JSONObjectWithData:data
-                   options:kNilOptions
-                   error:&error2];
-    
-    if([dataSourcee count] == 0)
+    if(connectionn == getDetailsConnection)
     {
-        whichImage = @"good-luck.png";
-        [self.solutionButton setTitle:@"مرة أخرى" forState:UIControlStateNormal];
+        info = [[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding] componentsSeparatedByString:@"\n"];
+        [self.busyInd setAlpha:0.0];
+        [self.view setUserInteractionEnabled:YES];
     }else
     {
-        int type = [[[dataSourcee objectAtIndex:0] objectForKey:@"type"] intValue];
-        if(type == 1) // itunes Card
+        NSError* error2;
+        
+        NSString* whichImage = @"";
+        
+        dataSourcee = [NSJSONSerialization
+                       JSONObjectWithData:data
+                       options:kNilOptions
+                       error:&error2];
+        
+        if([dataSourcee count] == 0)
         {
-            whichImage = @"itunes-card.png";
-        }else if(type == 2) // app code
+            whichImage = @"good-luck.png";
+            [self.solutionButton setTitle:@"مرة أخرى" forState:UIControlStateNormal];
+        }else
         {
-            whichImage = @"app-code.png";
-        }else if(type == 3) // Commercial
-        {
-            whichImage = @"free-ad.png";
+            int type = [[[dataSourcee objectAtIndex:0] objectForKey:@"type"] intValue];
+            if(type == 1) // itunes Card
+            {
+                whichImage = @"itunes-card.png";
+            }else if(type == 2) // app code
+            {
+                whichImage = @"app-code.png";
+            }else if(type == 3) // Commercial
+            {
+                whichImage = @"free-ad.png";
+            }
+            
+            [self.solutionButton setTitle:@"نسخ الكود" forState:UIControlStateNormal];
         }
         
-        [self.solutionButton setTitle:@"نسخ الكود" forState:UIControlStateNormal];
-    }
-    
-    
-    NSArray *imagesDicts = @[ @{@"sharp" : whichImage, @"blured" : @"gift.png"}];
-    for (NSDictionary *dictionary in imagesDicts) {
-        UIImage *sharpImage = [UIImage imageNamed:[dictionary objectForKey:@"sharp"]];
-        [imageView setImage:sharpImage];
-        UIImage *bluredImage = [UIImage imageNamed:[dictionary objectForKey:@"blured"]];
-        NSString *radiusString = [dictionary objectForKey:@"radius"];
-        scratchImageView = [[MDScratchImageView alloc] initWithFrame:imageView.frame];
-        scratchImageView.delegate = self;
-        if (nil == radiusString) {
-            scratchImageView.image = bluredImage;
-        } else {
-            [scratchImageView setImage:bluredImage radius:[radiusString intValue]];
-            scratchImageView.image = bluredImage;
+        
+        NSArray *imagesDicts = @[ @{@"sharp" : whichImage, @"blured" : @"gift.png"}];
+        for (NSDictionary *dictionary in imagesDicts) {
+            UIImage *sharpImage = [UIImage imageNamed:[dictionary objectForKey:@"sharp"]];
+            [imageView setImage:sharpImage];
+            UIImage *bluredImage = [UIImage imageNamed:[dictionary objectForKey:@"blured"]];
+            NSString *radiusString = [dictionary objectForKey:@"radius"];
+            scratchImageView = [[MDScratchImageView alloc] initWithFrame:imageView.frame];
+            scratchImageView.delegate = self;
+            if (nil == radiusString) {
+                scratchImageView.image = bluredImage;
+            } else {
+                [scratchImageView setImage:bluredImage radius:[radiusString intValue]];
+                scratchImageView.image = bluredImage;
+            }
+            [self.view addSubview:scratchImageView];
+            [scratchImageView setUserInteractionEnabled:YES];
+            [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"giftt"];
+            [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"mask"];
         }
-        [self.view addSubview:scratchImageView];
-        [scratchImageView setUserInteractionEnabled:YES];
-        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"giftt"];
-        [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"mask"];
     }
 }
 
